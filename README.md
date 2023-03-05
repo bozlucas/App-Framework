@@ -28,6 +28,6 @@ Then, open the project in Xcode and run it on your iOS device or simulator.
 This project uses the MVVM pattern to separate concerns and improve maintainability. The Model layer holds the data for the app, the View layer defines the app's user interface, and the ViewModel layer contains the app's business logic. UIKit is used to handle the Safari redirection.
 
 
-## Architecture
+## Contribution
 
 If you would like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
