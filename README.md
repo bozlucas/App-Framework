@@ -11,7 +11,7 @@ This iOS app project is built using SwiftUI and MVVM pattern with a UIKit connec
 To run this app on your iOS device, you'll need Xcode 12.0 or later and a minimum deployment target of iOS 16.2. Once you have the prerequisites installed, you can clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/Apple-Frameworks-Grid-View.git
+git clone https://https://github.com/bozlucas/App-Framework.git
 ```
 
 Then, open the project in Xcode and run it on your iOS device or simulator.
