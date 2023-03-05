@@ -10,22 +10,10 @@ import SwiftUI
 struct FrameworkDetailView: View {
     var framework: Framework
     @Binding var isShowingDetailView: Bool
+    @State private var isShowingSafariDetailView = false
     var body: some View {
         VStack{
-            HStack {
-                Spacer()
-                Button{
-                    isShowingDetailView = false
-                }label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(Color(.label))
-                        .imageScale(.large)
-                        .frame(width: 44, height: 44)
-                    
-                    
-                }
-            }
-            .padding()
+            XDismissButton(isShowingDetailView: $isShowingDetailView)
             Spacer()
             FrameworkTitleView(framework: framework)
             Text(framework.description)
@@ -33,12 +21,15 @@ struct FrameworkDetailView: View {
                 .padding()
             Spacer()
             Button{
-                
+                isShowingSafariDetailView = true
             }label: {
                 AFButton(title: "Learn More")
                 
             }
         }
+        .sheet(isPresented: $isShowingSafariDetailView, content:{
+            SafariView(url: URL(string: framework.urlString)!)
+        })
     }
 }
 
